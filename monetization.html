@@ -106,7 +106,7 @@
                         </ul>
                         <p><strong>操作时间</strong>：每日 2 小时，每月收入约 ¥10000。</p>
                     </div>
-                    <button class="btn btn-try">试用变现脚本</button>
+                    <button class="btn btn-try" onclick="downloadScript('MoneyPrinterV2')">试用变现脚本</button>
                 </div>
 
                 <div class="tool-card">
@@ -124,9 +124,9 @@
                             <li><strong>微服务出售</strong>：自动生成代码 → 封装为 SaaS → 每月订阅 ¥8000。</li>
                             <li><strong>竞品分析报告</strong>：自动分析市场 → 制作报告 → 每月咨询收入 ¥6000。</li>
                         </ul>
-                        <p><strong>操作时间</strong>：每周 10 小时，每月收入约 ¥18000。</li>
+                        <p><strong>操作时间</strong>：每周 10 小时，每月收入约 ¥18000。</p>
                     </div>
-                    <button class="btn btn-try">试用变现脚本</button>
+                    <button class="btn btn-try" onclick="downloadScript('Deer‑Flow')">试用变现脚本</button>
                 </div>
 
                 <div class="tool-card">
@@ -144,9 +144,9 @@
                             <li><strong>价格监控</strong>：监控竞争对手价格 → 动态定价 → 每月差价收益 ¥3000。</li>
                             <li><strong>表单填写</strong>：自动注册引流 → 转化付费用户 → 每月佣金 ¥5000。</li>
                         </ul>
-                        <p><strong>操作时间</strong>：每日 1 小时，每月收入约 ¥15000。</li>
+                        <p><strong>操作时间</strong>：每日 1 小时，每月收入约 ¥15000。</p>
                     </div>
-                    <button class="btn btn-try">试用变现脚本</button>
+                    <button class="btn btn-try" onclick="downloadScript('Browser‑Use')">试用变现脚本</button>
                 </div>
 
                 <div class="tool-card">
@@ -164,9 +164,9 @@
                             <li><strong>YouTube 频道</strong>：生成 50 个短片 → 平台分成 → 每月 ¥6000。</li>
                             <li><strong>定制视频服务</strong>：接单制作视频 → 每月 ¥15000。</li>
                         </ul>
-                        <p><strong>操作时间</strong>：每日 3 小时，每月收入约 ¥30000。</li>
+                        <p><strong>操作时间</strong>：每日 3 小时，每月收入约 ¥30000。</p>
                     </div>
-                    <button class="btn btn-try">试用变现脚本</button>
+                    <button class="btn btn-try" onclick="downloadScript('Tobira.ai')">试用变现脚本</button>
                 </div>
                 <!-- 真实数据结束 -->
                 <div class="automation-log">
@@ -184,7 +184,7 @@
                     <p>根据你选择的工具和投入时间，预估每月收入。</p>
                     <div class="mb-3">
                         <label>选择工具</label>
-                        <select class="form-select">
+                        <select class="form-select" id="tool-select">
                             <option>MoneyPrinterV2</option>
                             <option>Deer‑Flow</option>
                             <option>Browser‑Use</option>
@@ -193,13 +193,13 @@
                     </div>
                     <div class="mb-3">
                         <label>每日投入时间（小时）</label>
-                        <input type="number" class="form-control" value="2">
+                        <input type="number" class="form-control" id="hours" value="2">
                     </div>
                     <div class="mb-3">
                         <label>每月预估收入</label>
-                        <output class="form-control text-success">¥10000</output>
+                        <output class="form-control text-success" id="income">¥10000</output>
                     </div>
-                    <button class="btn btn-try w-100">开始赚钱</button>
+                    <button class="btn btn-try w-100" onclick="calculateIncome()">开始赚钱</button>
                 </div>
 
                 <div class="mt-4">
@@ -209,18 +209,18 @@
                             <strong>免费版</strong> · 每日简报
                             <span class="badge bg-success float-end">免费</span>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action" onclick="showProModal()">
                             <strong>专业版</strong> · ¥29/月
                             <span class="badge bg-primary float-end">付费</span>
                             <small class="text-muted">解锁自动化脚本、变现路径模板</small>
                         </a>
-                        <a href="#" class="list-group-item list-group-item-action">
+                        <a href="#" class="list-group-item list-group-item-action" onclick="showEnterpriseModal()">
                             <strong>企业版</strong> · ¥299/年
                             <span class="badge bg-warning float-end">付费</span>
                             <small class="text-muted">定制部署、一对一咨询、私有方案</small>
                         </a>
                     </div>
-                    <button class="btn btn-try mt-3">升级专业版</button>
+                    <button class="btn btn-try mt-3" onclick="showProModal()">升级专业版</button>
                 </div>
 
                 <div class="mt-4">
@@ -228,12 +228,12 @@
                     <div class="tool-card">
                         <h6>张三 · 一人公司</h6>
                         <p class="small">使用 MoneyPrinterV2 + Deer‑Flow，每月自动化收入 ¥23000。</p>
-                        <a href="#" class="small">查看完整案例</a>
+                        <a href="#" onclick="showCaseModal('张三')">查看完整案例</a>
                     </div>
                     <div class="tool-card">
                         <h6>李四 · 自媒体</h6>
                         <p class="small">使用 Tobira.ai + Browser‑Use，每月视频分成 ¥15000。</p>
-                        <a href="#" class="small">查看完整案例</a>
+                        <a href="#" onclick="showCaseModal('李四')">查看完整案例</a>
                     </div>
                 </div>
             </div>
@@ -245,26 +245,74 @@
         </div>
     </div>
 
+    <!-- 模态框 -->
+    <div class="modal fade" id="proModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">升级专业版</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>专业版 ¥29/月，解锁以下功能：</p>
+                    <ul>
+                        <li>自动化脚本下载</li>
+                        <li>变现路径模板</li>
+                        <li>每周实战指南</li>
+                        <li>优先技术支持</li>
+                    </ul>
+                    <p>请通过微信支付或支付宝扫码付款。</p>
+                    <img src="https://via.placeholder.com/300x300.png?text=Payment+QR+Code" alt="支付二维码">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         // 计算器逻辑
-        const toolSelect = document.querySelector('.form-select');
-        const timeInput = document.querySelector('input[type="number"]');
-        const output = document.querySelector('output');
-        const calculate = () => {
+        const toolSelect = document.getElementById('tool-select');
+        const hoursInput = document.getElementById('hours');
+        const incomeOutput = document.getElementById('income');
+        const calculateIncome = () => {
             let tool = toolSelect.value;
-            let time = parseInt(timeInput.value) || 2;
+            let hours = parseInt(hoursInput.value) || 2;
             let income = 0;
             switch(tool) {
-                case 'MoneyPrinterV2': income = time * 5000; break;
-                case 'Deer‑Flow': income = time * 9000; break;
-                case 'Browser‑Use': income = time * 7500; break;
-                case 'Tobira.ai': income = time * 10000; break;
+                case 'MoneyPrinterV2': income = hours * 5000; break;
+                case 'Deer‑Flow': income = hours * 9000; break;
+                case 'Browser‑Use': income = hours * 7500; break;
+                case 'Tobira.ai': income = hours * 10000; break;
             }
-            output.textContent = '¥' + income;
+            incomeOutput.textContent = '¥' + income;
+            alert(`预估月收入 ¥${income}，点击“试用变现脚本”开始操作。`);
         };
-        toolSelect.addEventListener('change', calculate);
-        timeInput.addEventListener('input', calculate);
-        calculate();
+
+        // 下载脚本
+        const downloadScript = (tool) => {
+            alert(`正在下载 ${tool} 的自动化脚本...`);
+            window.location.href = 'script-download.html';
+        };
+
+        // 显示专业版模态框
+        const showProModal = () => {
+            new bootstrap.Modal(document.getElementById('proModal')).show();
+        };
+
+        // 显示企业版模态框（类似）
+        const showEnterpriseModal = () => {
+            alert('企业版 ¥299/年，请联系客服定制部署。');
+        };
+
+        // 显示案例模态框
+        const showCaseModal = (name) => {
+            alert(`查看 ${name} 的完整案例页面（建设中）。`);
+        };
+
+        // 初始化计算器
+        toolSelect.addEventListener('change', calculateIncome);
+        hoursInput.addEventListener('input', calculateIncome);
+        calculateIncome();
     </script>
 </body>
 </html>
