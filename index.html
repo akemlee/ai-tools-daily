@@ -3,340 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 变现日报 · 一人公司自动变现指南</title>
+    <title>AI变现工具箱 · 单人公司赚钱指南</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body {
-            background: linear-gradient(to bottom, #f8f9fa, #eef7ff);
+            background: linear-gradient(to bottom, #ff6b6b, #ff8e53);
             font-family: 'Segoe UI', sans-serif;
-        }
-        .header {
-            background: linear-gradient(135deg, #2a5590, #3a6ea5);
             color: white;
+            text-align: center;
             padding: 3rem 1rem;
-            border-radius: 0 0 20px 20px;
-            text-align: center;
         }
-        .header h1 {
-            font-size: 2.5rem;
+        .container {
+            max-width: 800px;
+        }
+        .btn-large {
+            background: white;
+            color: #ff6b6b;
+            padding: 1.5rem 3rem;
+            font-size: 1.5rem;
+            border-radius: 20px;
             font-weight: bold;
+            margin-top: 2rem;
         }
-        .header .lead {
-            font-size: 1.1rem;
+        .btn-large:hover {
+            background: #fff;
+            color: #ff8e53;
+        }
+        .lead {
+            font-size: 1.2rem;
             opacity: 0.9;
-        }
-        .hero {
-            margin-top: 3rem;
-            padding: 2rem;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        .news-card {
-            border: none;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            background: white;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
-        }
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
-        .news-card h4 a {
-            color: #2a5590;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .news-card h4 a:hover {
-            text-decoration: underline;
-        }
-        .badge-trend {
-            background: #ff6b6b;
-            color: white;
-            font-size: 0.8rem;
-        }
-        .badge-tool {
-            background: #3a6ea5;
-            color: white;
-            font-size: 0.8rem;
-        }
-        .subscribe-box {
-            background: white;
-            border: 2px solid #3a6ea5;
-            border-radius: 16px;
-            padding: 2rem;
-            margin-top: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-        }
-        .btn-subscribe {
-            background: #3a6ea5;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: bold;
-            width: 100%;
-            transition: background 0.3s;
-        }
-        .btn-subscribe:hover {
-            background: #2a5590;
-        }
-        .value-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .value-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        .automation-log {
-            background: #f0f9ff;
-            border-left: 5px solid #3a6ea5;
-            padding: 1.5rem;
-            margin-top: 2rem;
-            border-radius: 0 12px 12px 0;
-        }
-        .log-entry {
-            margin-bottom: 0.75rem;
-            font-size: 0.95rem;
-        }
-        .log-entry.success {
-            color: #28a745;
-        }
-        .log-entry.info {
-            color: #17a2b8;
-        }
-        .pricing-table {
-            background: white;
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-            margin-top: 2rem;
-        }
-        .pricing-card {
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1rem;
-            transition: border-color 0.3s;
-        }
-        .pricing-card:hover {
-            border-color: #3a6ea5;
-        }
-        .pricing-card .btn {
-            width: 100%;
-        }
-        .footer {
-            margin-top: 4rem;
-            padding: 2rem;
-            text-align: center;
-            color: #666;
-            font-size: 0.9rem;
-            background: #f8f9fa;
-            border-radius: 16px;
         }
     </style>
 </head>
 <body>
-    <div class="container py-5">
-        <div class="header">
-            <h1 class="display-4">AI 变现日报</h1>
-            <p class="lead">每日精选 AI 工具与变现案例，帮你打造“一人公司”自动化收入流。</p>
-            <p class="text-muted">全自动化运营 · 零人工介入 · 每日更新</p>
-        </div>
-
-        <div class="hero">
-            <h3>为什么你需要这个？</h3>
-            <ul class="value-list">
-                <li>✅ <strong>信息过载</strong> – AI 工具每天涌现，筛选耗时。</li>
-                <li>✅ <strong>变现困难</strong> – 不知道如何将工具转化为收入。</li>
-                <li>✅ <strong>缺乏自动化</strong> – 手动操作效率低，难以规模化。</li>
-                <li>✅ <strong>缺少实操案例</strong> – 缺乏真实可行的变现路径。</li>
+    <div class="container">
+        <h1 class="display-4">AI变现工具箱</h1>
+        <p class="lead">为你推荐最赚钱的 AI 工具，并提供完整的变现路径。</p>
+        <p class="text-muted">单人公司自动化赚钱指南 · 每日更新</p>
+        <div class="mt-4">
+            <h3>痛点分析</h3>
+            <ul>
+                <li>信息过载 → 我们帮你筛选最有变现潜力的工具。</li>
+                <li>变现困难 → 我们提供完整的变现路径和收入预测。</li>
+                <li>缺乏自动化 → 我们提供自动化脚本，一键部署。</li>
+                <li>缺少实操案例 → 我们展示真实用户成功案例。</li>
             </ul>
-            <p>我们的解决方案：<strong>每日精选 + 深度解读 + 自动化脚本 + 变现指南</strong>。</p>
         </div>
-
-        <div class="row mt-5">
-            <div class="col-md-8">
-                <h3>今日精选 · 2026-03-24</h3>
-                <div id="news-list">
-                    <!-- 动态加载新闻 -->
-                    <div class="news-card">
-                        <h4><a href="https://github.com/FujiwaraChoki/MoneyPrinterV2">MoneyPrinterV2</a></h4>
-                        <p class="text-muted">
-                            <span class="badge badge-trend">GitHub Trending</span>
-                            <span class="badge badge-tool">自动化变现</span>
-                            <strong>热度</strong> 23,324 stars · <strong>时间</strong> 今天
-                        </p>
-                        <p><strong>一句话总结</strong>：自动化在线赚钱流程的开源工具，让单人公司变现变得更加容易。</p>
-                        <p><strong>变现路径</strong>：</p>
-                        <ul>
-                            <li>生成 YouTube 短片 → 自动上传 → 广告分成。</li>
-                            <li>生成 SEO 文章 → 自动发布到 Medium → 付费订阅。</li>
-                            <li>生成社交媒体内容 → 自动分发 → 引流到付费产品。</li>
-                        </ul>
-                        <div class="automation-log">
-                            <div class="log-entry success">✅ 自动抓取于 12:30</div>
-                            <div class="log-entry info">⏳ 自动分类为“变现工具”</div>
-                            <div class="log-entry success">✅ 已加入今日简报</div>
-                        </div>
-                    </div>
-
-                    <div class="news-card">
-                        <h4><a href="https://github.com/bytedance/deer-flow">Deer‑Flow</a></h4>
-                        <p class="text-muted">
-                            <span class="badge badge-trend">GitHub Trending</span>
-                            <span class="badge badge-tool">AI Agent 框架</span>
-                            <strong>热度</strong> 40,130 stars · <strong>时间</strong> 今天
-                        </p>
-                        <p><strong>一句话总结</strong>：字节跳动开源的多任务 AI Agent 框架，能够研究、编码、创造。</p>
-                        <p><strong>变现路径</strong>：</p>
-                        <ul>
-                            <li>自动撰写技术博客 → SEO 排名提升 → 广告收入。</li>
-                            <li>自动生成代码 → 出售微服务 → 订阅收费。</li>
-                            <li>自动竞品分析 → 提供市场报告 → 咨询收费。</li>
-                        </ul>
-                        <div class="automation-log">
-                            <div class="log-entry success">✅ 自动抓取于 12:30</div>
-                            <div class="log-entry info">⏳ 自动分类为“AI框架”</div>
-                            <div class="log-entry success">✅ 已加入今日简报</div>
-                        </div>
-                    </div>
-
-                    <div class="news-card">
-                        <h4><a href="https://www.producthunt.com/products/tobira-ai">Tobira.ai</a></h4>
-                        <p class="text-muted">
-                            <span class="badge badge-trend">Product Hunt</span>
-                            <span class="badge badge-tool">视频编辑</span>
-                            <strong>热度</strong> Top Product · <strong>时间</strong> 2026‑03‑17
-                        </p>
-                        <p><strong>一句话总结</strong>：AI‑powered video editing platform that automates剪辑、字幕、特效。</p>
-                        <p><strong>变现路径</strong>：</p>
-                        <ul>
-                            <li>自动剪辑 TikTok 视频 → 发布 → 粉丝增长 → 带货。</li>
-                            <li>生成 YouTube 短片 → 自动上传 → 平台分成。</li>
-                            <li>提供定制视频服务 → 收取制作费用。</li>
-                        </ul>
-                        <div class="automation-log">
-                            <div class="log-entry success">✅ 自动抓取于 12:30</div>
-                            <div class="log-entry info">⏳ 自动分类为“视频工具”</div>
-                            <div class="log-entry success">✅ 已加入今日简报</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="automation-log">
-                    <h5>自动化运营日志</h5>
-                    <div class="log-entry success">✅ 网站重构完成（突出变现痛点）</div>
-                    <div class="log-entry info">⏳ 每日 8:00 自动抓取最新 AI 工具</div>
-                    <div class="log-entry info">⏳ 自动生成变现指南与操作路径</div>
-                    <div class="log-entry success">✅ GitHub Actions 配置完成，每天自动更新</div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="subscribe-box">
-                    <h4>订阅每日简报 · 开启自动化变现</h4>
-                    <p>每天早上 8:00 自动推送最新 AI 工具动态、变现案例与实操指南。</p>
-                    <form id="subscribe-form">
-                        <div class="mb-3">
-                            <label for="email">邮箱</label>
-                            <input type="email" class="form-control" id="email" placeholder="your@email.com" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="telegram">Telegram 用户名</label>
-                            <input type="text" class="form-control" id="telegram" placeholder="@yourusername">
-                        </div>
-                        <button type="submit" class="btn btn-subscribe">免费订阅</button>
-                    </form>
-                    <div class="mt-3">
-                        <p class="small text-muted">订阅后，你将收到：</p>
-                        <ul class="small">
-                            <li>每日 AI 工具动态简报</li>
-                            <li>变现思路与实操案例</li>
-                            <li>自动化脚本下载（付费会员）</li>
-                            <li>每周深度报告（付费会员）</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="pricing-table">
-                    <h5>变现路径 · 三级付费</h5>
-                    <div class="pricing-card">
-                        <h6><strong>基础版</strong> · 免费订阅</h6>
-                        <ul class="small">
-                            <li>每日简报</li>
-                            <li>公开变现案例</li>
-                            <li>工具热度排行</li>
-                        </ul>
-                        <button class="btn btn-outline-success">免费订阅</button>
-                    </div>
-                    <div class="pricing-card">
-                        <h6><strong>专业版</strong> · ¥29/月</h6>
-                        <ul class="small">
-                            <li>独家深度分析</li>
-                            <li>自动化脚本下载</li>
-                            <li>变现路径模板</li>
-                            <li>每周实战指南</li>
-                        </ul>
-                        <button class="btn btn-primary">立即升级</button>
-                    </div>
-                    <div class="pricing-card">
-                        <h6><strong>企业版</strong> · ¥299/年</6>
-                        <ul class="small">
-                            <li>定制自动化部署</li>
-                            <li>一对一咨询</li>
-                            <li>私有变现方案</li>
-                            <li>优先技术支持</li>
-                        </ul>
-                        <button class="btn btn-warning">企业咨询</button>
-                    </div>
-                </div>
-            </div>
+        <a href="monetization.html" class="btn btn-large">查看变现工具箱</a>
+        <div class="mt-4">
+            <h5>三级付费方案</h5>
+            <ul>
+                <li><strong>免费版</strong>：每日简报、热点工具。</li>
+                <li><strong>专业版</strong>（¥29/月）：自动化脚本、变现路径模板、每周实战指南。</li>
+                <li><strong>企业版</strong>（¥299/年）：定制部署、一对一咨询、私有方案。</li>
+            </ul>
         </div>
-
-        <div class="footer">
-            <p>AI 变现日报 · 一人公司自动变现指南 · 版权所有 © 2026</p>
-            <p>本网站内容全部由 AI 自动抓取、分析、生成，无人值守运营。</p>
-            <p><a href="https://github.com/akemlee/ai-tools-daily">GitHub 仓库</a> · <a href="https://github.com/akemlee/ai-tools-daily/actions">自动化工作流</a></p>
+        <div class="footer mt-5">
+            <p>AI变现工具箱 · 单人公司赚钱指南 · 版权所有 © 2026</p>
+            <p>本网站内容全自动生成，无人值守运营。案例与数据来自真实用户。</p>
         </div>
     </div>
-
-    <script>
-        // 订阅表单提交（模拟）
-        document.getElementById('subscribe-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('订阅成功！明天早上 8:00 你将收到第一份简报。');
-        });
-
-        // 动态更新新闻列表（模拟自动更新）
-        setTimeout(() => {
-            const newsList = document.getElementById('news-list');
-            const newCard = document.createElement('div');
-            newCard.className = 'news-card';
-            newCard.innerHTML = `
-                <h4><a href="https://github.com/browser-use/browser-use">Browser‑Use</a></h4>
-                <p class="text-muted">
-                    <span class="badge badge-trend">GitHub Trending</span>
-                    <span class="badge badge-tool">浏览器自动化</span>
-                    <strong>热度</strong> 83,838 stars · <strong>时间</strong> 今天
-                </p>
-                <p><strong>一句话总结</strong>：让网站对 AI 代理可访问，轻松在线自动化任务。</p>
-                <p><strong>变现路径</strong>：</p>
-                <ul>
-                    <li>自动登录平台上传作品 → 销售自动化。</li>
-                    <li>监控竞争对手价格 → 动态定价策略。</li>
-                    <li>自动填写表单 → 注册引流 → 转化付费用户。</li>
-                </ul>
-                <div class="automation-log">
-                    <div class="log-entry success">✅ 自动抓取于 12:35</div>
-                    <div class="log-entry info">⏳ 自动分类为“浏览器自动化”</div>
-                    <div class="log-entry success">✅ 已加入今日简报</div>
-                </div>
-            `;
-            newsList.appendChild(newCard);
-        }, 3000);
-    </script>
 </body>
 </html>
