@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deploy to GitHub Pages</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        pre { background: #f5f5f5; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Deploy AI Tools Daily to GitHub Pages</h1>
+    <p>Follow these steps to deploy the site publicly:</p>
+    <ol>
+        <li>Go to <a href="https://github.com/new">github.com/new</a> and create a new repository named <code>ai-tools-daily</code> (public).</li>
+        <li>Clone the repository locally:</li>
+        <pre>git clone https://github.com/YOUR_USERNAME/ai-tools-daily.git
+cd ai-tools-daily</pre>
+        <li>Copy the files from this site into the repository:</li>
+        <pre>cp -r /root/.openclaw/workspace/ai-news-site/* .</pre>
+        <li>Commit and push:</li>
+        <pre>git add .
+git commit -m "Initial AI Tools Daily website"
+git push</pre>
+        <li>Go to the repository Settings → Pages → Source: select <code>main</code> branch, root folder.</li>
+        <li>Wait a minute, then visit <code>https://YOUR_USERNAME.github.io/ai-tools-daily</code></li>
+    </ol>
+    <p>For automatic updates, add a GitHub Actions workflow:</li>
+    <pre># .github/workflows/update.yml
+name: Update News
+on:
+  schedule:
+    - cron: '0 8 * * *'  # 8:00 daily
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run update script
+        run: python3 update.py
+      - name: Commit and push
+        run: |
+          git add data/news.json
+          git commit -m "Auto-update news"
+          git push</pre>
+    <p>Once deployed, your site will be available at <strong>https://YOUR_USERNAME.github.io/ai-tools-daily</strong></p>
+    <p>You can also deploy to Vercel/Netlify by uploading the folder directly.</p>
+</body>
+</html>
